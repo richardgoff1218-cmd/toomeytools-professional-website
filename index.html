@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toomey Tools | Tools, Hardware &amp; Grocery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        :root {
+            --orange: #FF6200;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/2000/1200');
+            background-size: cover;
+            background-position: center;
+        }
+        .animate-fade-in {
+            animation: fadeIn 1s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #FF6200;
+            transform: translateY(-1px);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-[#FF6200] rounded-xl flex items-center justify-center text-white font-bold text-2xl">TT</div>
+                <div>
+                    <span class="text-2xl font-semibold tracking-tight">Toomey Tools</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#shop" class="nav-link">Shop</a>
+                <a href="#locations" class="nav-link">Locations</a>
+                <a href="#grocery" class="nav-link">Grocery</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center gap-x-4">
+                <button onclick="window.location.href='#shop'" class="px-6 py-2.5 bg-[#FF6200] hover:bg-orange-600 text-white rounded-2xl font-semibold flex items-center gap-x-2 transition-colors">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Shop Now</span>
+                </button>
+                <button class="md:hidden text-2xl"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="max-w-2xl animate-fade-in">
+                <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-5 py-2 rounded-3xl text-sm mb-6">
+                    <span class="relative flex h-3 w-3">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                    </span>
+                    Open Today at All Locations
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold leading-none tracking-tighter mb-6">Tools, Hardware,<br>&amp; Everyday Needs</h1>
+                <p class="text-xl md:text-2xl mb-10 text-white/90">Family owned for over 40 years. Serving Belleview, Ocala, and Waldo with quality products and great deals.</p>
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="document.getElementById('locations').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 bg-white text-black font-semibold rounded-3xl flex items-center gap-x-3 hover:shadow-xl transition-all">
+                        Find a Location <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button onclick="document.getElementById('shop').scrollIntoView({behavior: 'smooth'})" class="px-8 py-4 border-2 border-white hover:bg-white hover:text-black font-semibold rounded-3xl transition-all">Browse Products</button>
+                </div>
+                <div class="mt-12 flex items-center gap-x-8 text-sm">
+                    <div><i class="fas fa-map-marker-alt mr-1"></i> 3 Convenient Locations</div>
+                    <div class="h-4 w-px bg-white/30"></div>
+                    <div>40+ Years Family Owned</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Locations -->
+    <section id="locations" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="uppercase tracking-widest text-[#FF6200] font-semibold">Our Stores</span>
+                <h2 class="text-4xl font-semibold mt-2">Visit Us at Any Location</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Belleview -->
+                <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-sm">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/1015/800/400')"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-2xl mb-1">Belleview</h3>
+                        <p class="text-gray-600 mb-4">12055 S US Hwy 441, Belleview, FL 34420</p>
+                        <p class="text-[#FF6200] font-medium">(352) 347-0017</p>
+                        <p class="mt-6 text-sm">Mon-Sat 8AM-5PM | Sun 8AM-4PM</p>
+                        <a href="https://maps.google.com/?q=12055+S+US+Hwy+441+Belleview+FL" target="_blank" class="mt-8 inline-flex items-center text-[#FF6200] hover:underline">Get Directions <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Waldo -->
+                <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-sm">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/800/400')"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-2xl mb-1">Waldo</h3>
+                        <p class="text-gray-600 mb-4">17313 NE US Hwy 301, Waldo, FL 32694</p>
+                        <p class="text-[#FF6200] font-medium">Phone: Check in-store</p>
+                        <p class="mt-6 text-sm">Hours: Vary by day - Call ahead</p>
+                        <a href="https://maps.google.com/?q=17313+NE+US+Hwy+301+Waldo+FL" target="_blank" class="mt-8 inline-flex items-center text-[#FF6200] hover:underline">Get Directions <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
+                </div>
+                <!-- Ocala -->
+                <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-sm">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/30/800/400')"></div>
+                    <div class="p-8">
+                        <h3 class="font-semibold text-2xl mb-1">Ocala</h3>
+                        <p class="text-gray-600 mb-4">2926 NE Jacksonville Rd, Ocala, FL 34479</p>
+                        <p class="text-[#FF6200] font-medium">(352) 369-0001</p>
+                        <p class="mt-6 text-sm">Hours: Mon-Fri 8AM-5PM | Sat-Sun vary</p>
+                        <a href="https://maps.google.com/?q=2926+NE+Jacksonville+Rd+Ocala+FL" target="_blank" class="mt-8 inline-flex items-center text-[#FF6200] hover:underline">Get Directions <i class="fas fa-external-link-alt ml-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section id="shop" class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-semibold text-center mb-4">Shop Our Categories</h2>
+            <p class="text-center text-gray-600 max-w-md mx-auto mb-12">From professional tools to home essentials and fresh groceries</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- Cards for categories with hover animations -->
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🔧</div>
+                    <h4 class="font-semibold">Hand &amp; Power Tools</h4>
+                </div>
+                <!-- Repeat for others: Hardware, Lawn &amp; Garden, Mower Parts, Grocery, Fishing Tackle -->
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🏠</div>
+                    <h4 class="font-semibold">Hardware &amp; Home</h4>
+                </div>
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🌱</div>
+                    <h4 class="font-semibold">Lawn &amp; Garden</h4>
+                </div>
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🍎</div>
+                    <h4 class="font-semibold">Grocery &amp; Deals</h4>
+                </div>
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🐟</div>
+                    <h4 class="font-semibold">Fishing &amp; Bait</h4>
+                </div>
+                <div class="group bg-white p-6 rounded-3xl text-center card-hover border border-transparent hover:border-[#FF6200]/20">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-orange-100 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform">🚜</div>
+                    <h4 class="font-semibold">Mower Parts</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-20 bg-[#FF6200] text-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-4xl font-semibold mb-6">Over 40 Years of Serving Our Community</h2>
+                <p class="text-lg leading-relaxed">Toomey Tools is a family-owned business dedicated to providing high-quality tools, hardware, grocery items, and more at unbeatable prices. Our three locations offer everything you need for your home, garden, and daily life.</p>
+                <ul class="mt-8 space-y-4">
+                    <li class="flex gap-x-3"><i class="fas fa-check text-green-300 mt-1"></i> Expert staff ready to help</li>
+                    <li class="flex gap-x-3"><i class="fas fa-check text-green-300 mt-1"></i> Weekly specials and deals</li>
+                    <li class="flex gap-x-3"><i class="fas fa-check text-green-300 mt-1"></i> Crazy Gracen's Grocery inside select locations</li>
+                </ul>
+            </div>
+            <div class="bg-white/10 backdrop-blur rounded-3xl p-8">
+                <p class="italic text-lg">"Best local hardware and grocery deals around. The staff knows their stuff and always has great recommendations."</p>
+                <p class="mt-6 font-medium">- Happy Customer, Belleview</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-x-3 text-xl mb-4">
+                    <div class="w-8 h-8 bg-[#FF6200] rounded-2xl flex items-center justify-center">TT</div>
+                    <span class="font-semibold">Toomey Tools</span>
+                </div>
+                <p class="text-gray-400">Your local source for tools, hardware, groceries and more.</p>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Quick Links</h5>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Shop All</a></li>
+                    <li><a href="#" class="hover:text-white">Weekly Deals</a></li>
+                    <li><a href="#" class="hover:text-white">Locations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Locations</h5>
+                <div class="text-sm text-gray-400 space-y-4">
+                    <div>Belleview • (352) 347-0017</div>
+                    <div>Ocala • (352) 369-0001</div>
+                    <div>Waldo</div>
+                </div>
+            </div>
+            <div>
+                <h5 class="font-semibold mb-4">Connect With Us</h5>
+                <div class="flex gap-x-4 text-2xl">
+                    <i class="fab fa-facebook hover:text-[#FF6200] cursor-pointer"></i>
+                    <i class="fab fa-instagram hover:text-[#FF6200] cursor-pointer"></i>
+                </div>
+                <p class="mt-8 text-xs text-gray-500">© 2026 Toomey Tools. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded
+        function initializeTailwind() {
+            // Can add more dynamic behavior
+            console.log('Toomey Tools website loaded - Professional & Animated!');
+        }
+        window.onload = initializeTailwind;
+
+        // Simple scroll animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Add to cards etc. but for demo it's already good
+    </script>
+</body>
+</html>
